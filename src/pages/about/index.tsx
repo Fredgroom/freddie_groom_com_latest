@@ -24,7 +24,7 @@ const About = () => {
         I relocated from London to Canberra in 2023 and focussed the time
         applying for permanent residency expanding my back-end skill set, to
         deliver full-stack apps, through online courses and I started a
-        part-time bachelor's degree to broaden my understanding of computer
+        part-time bachelor&apos;s degree to broaden my understanding of computer
         science.
       </p>
       <p>References are available on request.</p>

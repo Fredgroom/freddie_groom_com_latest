@@ -3,7 +3,7 @@ const Contact = () => {
     <>
       <h1>Contact</h1>
       <p>
-        If you're interested in collaborating please get in touch at -{' '}
+        If you&apos;re interested in collaborating please get in touch at -{' '}
         <span className='bold'>Fredgroom@gmail.com</span>
       </p>
     </>

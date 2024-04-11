@@ -42,9 +42,7 @@ const Background = ({ children }: BackgroundProps) => {
   return (
     <main ref={backgroundRef} className={styles.background}>
       {beansArr &&
-        beansArr?.map((bean) => {
-          console.log('bean', bean);
-          console.log('bean.altAnimation', bean.altAnimation);
+        beansArr?.map((bean, index) => {
           return (
             <Bean
               top={bean.top}
@@ -52,6 +50,7 @@ const Background = ({ children }: BackgroundProps) => {
               color={bean.colour}
               size={bean.size}
               altAnimation={bean.altAnimation}
+              key={index}
             />
           );
         })}
