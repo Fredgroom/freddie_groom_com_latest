@@ -1,0 +1,66 @@
+.bean {
+  height: 12px;
+  width: 6px;
+  border-radius: 2px;
+  background-color: var(--secondary);
+  position: absolute;
+  animation: animateBean 1.5s linear infinite;
+}
+
+.altAnimation {
+  background-color: yellow;
+  animation: animateAltBean 1.5s linear infinite;
+}
+
+.large {
+  height: 18px;
+  width: 8px;
+}
+
+@keyframes animateBean {
+  0% {
+    transform: rotate(-10deg) translateX(0);
+  }
+  25% {
+    transform: rotate(0deg) translateX(1px);
+  }
+  50% {
+    transform: rotate(10deg) translateX(2px);
+  }
+  75% {
+    transform: rotate(0deg) translateX(1px);
+  }
+  100% {
+    transform: rotate(-10deg) translateX(0);
+  }
+}
+@keyframes animateAltBean {
+  0% {
+    transform: rotate(10deg) translateX(0px);
+  }
+  25% {
+    transform: rotate(0deg) translateX(-1px);
+  }
+  50% {
+    transform: rotate(-10deg) translateX(-2px);
+  }
+  75% {
+    transform: rotate(0deg) translateX(-1px);
+  }
+  100% {
+    transform: rotate(10deg) translateX(0px);
+  }
+}
+
+.blue {
+  background-color: var(--blue);
+}
+.orange {
+  background-color: var(--orange);
+}
+.green {
+  background-color: var(--green);
+}
+.primary {
+  background-color: var(--primary);
+}

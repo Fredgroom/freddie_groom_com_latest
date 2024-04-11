@@ -1,0 +1,22 @@
+.background {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  overflow: hidden;
+}
+
+.background_content_wrapper {
+  /* padding: 4em; */
+  z-index: 9;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+.background_inner {
+  font-weight: bold;
+  background-color: var(--primary);
+  z-index: 99;
+  padding: 1em;
+}

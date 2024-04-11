@@ -1,0 +1,52 @@
+:root {
+  --primary: #1f2022;
+  --secondary: #ebefbf;
+  --blue: #1ccad8;
+  --orange: #e57a44;
+  --green: #0cf574;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--primary);
+  color: var(--secondary);
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+#_next {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+}
+
+img {
+  width: 50px;
+}
+
+.linkImage {
+  fill: #ebefbf;
+  width: 50px;
+  height: 50px;
+}
+
+.logoLink {
+  padding: 1em;
+}
+
+svg {
+  fill: brown;
+}
+
+.bold {
+  font-weight: bold;
+}

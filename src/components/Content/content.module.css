@@ -1,0 +1,13 @@
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content_inner_wrapper {
+  background-color: var(--primary);
+  padding: 20px;
+  box-shadow: 4px 4px var(--secondary);
+  border: 1px solid var(--secondary);
+  max-width: 700px;
+}
