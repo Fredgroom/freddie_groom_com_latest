@@ -7,7 +7,7 @@ const About = () => {
       <ContentCard title>
         <h1>About</h1>
       </ContentCard>
-      <ContentCard>
+      <ContentCard invertedColor>
         <div
           style={{
             display: 'grid',
@@ -15,23 +15,19 @@ const About = () => {
             alignItems: 'center',
           }}
         >
-          <div>
-            <p>
-              An experienced user-focused developer building responsive
-              data-driven web applications with React and TypeScript equally
-              comfortable refactoring existing projects or building products
-              from scratch.
-            </p>
-            <p>
-              I am equally comfortable working independently or within teams.
-            </p>
-            <p>
-              I consistently 'go the extra mile' to meet project deadlines when
-              requirements need to be extended
-            </p>
-          </div>
+          <p>
+            I am a user-focused developer with over 4 years of professional
+            experience building responsive, data-driven web applications using
+            React and TypeScript. I build responsive data-driven web interfaces
+            with reusable components and am comfortable refactoring existing
+            projects or building from the ground up and reliably go the extra
+            mile to meet deadlines when requirements need to be extended, both
+            independently and within multidisciplinary teams.
+          </p>
           <ReactSVG />
         </div>
+      </ContentCard>
+      <ContentCard invertedColor>
         <p>
           I have a keen appreciation for UX/UI design, demonstrated through my
           initiative in teaching colleagues Figma to improve software design
@@ -41,6 +37,8 @@ const About = () => {
           colleagues and interacting with clients. In my free time, I explore
           new technologies and build projects for charity.
         </p>
+      </ContentCard>
+      <ContentCard invertedColor>
         <p>
           I relocated from London to Canberra in 2023 and focussed the time
           applying for permanent residency expanding my back-end skill set, to
@@ -48,6 +46,8 @@ const About = () => {
           part-time bachelor&apos;s degree to broaden my understanding of
           computer science.
         </p>
+      </ContentCard>
+      <ContentCard invertedColor>
         <p>References are available on request.</p>
       </ContentCard>
     </>

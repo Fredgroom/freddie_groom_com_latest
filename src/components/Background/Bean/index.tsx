@@ -9,7 +9,6 @@ interface BeanProps {
 }
 const Bean = ({ color, top, left, size, altAnimation }: BeanProps) => {
   if (color == 'primary') return;
-  console.log('altAnimation', altAnimation);
   return (
     <div
       className={`${styles.bean} ${styles[color]} ${styles[size]} ${

@@ -11,3 +11,24 @@
   width: 100%;
   border-bottom: 4px solid var(--secondary);
 }
+
+.mobileMenu {
+  display: grid;
+  grid-template-columns: 1fr;
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
+}
+.mobileMenuToggle {
+  cursor: pointer;
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
+}
+
+.menu {
+  display: none;
+  @media screen and (min-width: 600px) {
+    display: block;
+  }
+}

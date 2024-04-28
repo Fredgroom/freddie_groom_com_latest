@@ -8,14 +8,14 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.footer_inner}>
         <div>
-          <p>contact - Fredgroom@gmail.com</p>
+          <p>Fredgroom@gmail.com</p>
           <p>&copy; {new Date().getFullYear()} freddiegroom.com</p>
         </div>
         <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
           <LinkedIn />
           <Github />
+          <Download />
         </div>
-        <Download />
       </div>
     </footer>
   );

@@ -1,8 +1,11 @@
+import ContentCard from '@/components/ContentCard';
+
 const Home = () => {
   return (
     <>
-      <h1>Freddie Groom - Software Developer</h1>
-      <p>This is the Developer portfolio for Freddie Groom</p>
+      <ContentCard title>
+        <h1>Freddie Groom - Software Developer</h1>
+      </ContentCard>
     </>
   );
 };

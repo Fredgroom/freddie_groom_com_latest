@@ -6,6 +6,10 @@
   --green: #0cf574;
 }
 
+svg {
+  fill: var(--secondary);
+}
+
 html {
   height: 100vh;
 }
@@ -22,6 +26,10 @@ body {
   grid-template-rows: 1fr;
 }
 
+h1 {
+  font-weight: 700;
+}
+
 #_next {
   display: grid;
   grid-template-rows: 1fr;
@@ -35,16 +43,19 @@ img {
 
 .linkImage {
   fill: #ebefbf;
-  width: 50px;
-  height: 50px;
+  width: 28px;
+  height: 28px;
+  @media screen and (min-width: 480px) {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .logoLink {
-  padding: 1em;
-}
-
-svg {
-  fill: brown;
+  padding: 0.5em;
+  @media screen and (min-width: 480px) {
+    padding: 1em;
+  }
 }
 
 .bold {

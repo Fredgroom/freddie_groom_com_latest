@@ -5,6 +5,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1em 1em;
+  padding: 0.5em;
+  @media screen and (min-width: 480px) {
+    padding: 1em;
+  }
   border-radius: 8px;
+}
+
+.download_wrapper {
+  padding: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

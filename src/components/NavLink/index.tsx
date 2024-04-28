@@ -9,16 +9,7 @@ interface NavLinkProps {
 const NavLink = ({ href, children }: NavLinkProps) => {
   return (
     <>
-      <Link
-        href={href}
-        style={{
-          textDecoration: 'none',
-          // color: 'white',
-          margin: 0,
-          padding: '1em',
-        }}
-        className={styles.navLink}
-      >
+      <Link href={href} className={styles.navLink}>
         {children}
       </Link>
     </>
