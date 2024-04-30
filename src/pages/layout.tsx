@@ -24,7 +24,6 @@ const RootLayout = ({ children, pageTitle }: RootLayoutProps) => {
         {/* Add any global tags you want to include in every page */}
       </Head>
       <Header />
-
       <Content>{children}</Content>
       <Footer />
     </Background>

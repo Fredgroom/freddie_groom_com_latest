@@ -7,7 +7,10 @@ interface ContentProps {
 const Content = ({ children }: ContentProps) => {
   return (
     <div className={styles.content}>
-      <div className={styles.content_inner_wrapper}>{children}</div>
+      <div className={styles.content_inner_wrapper}>
+        <div style={{ height: '100px' }}></div>
+        <>{children}</>
+      </div>
     </div>
   );
 };

@@ -1,8 +1,7 @@
 .content {
+  padding: 1em;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 1em;
 }
 
 /* .content_inner_wrapper {
@@ -13,9 +12,6 @@
   max-width: 700px;
 } */
 .content_inner_wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
   /* background-color: var(--primary); */
   /* padding: 20px; */
   /* box-shadow: 4px 4px var(--secondary); */

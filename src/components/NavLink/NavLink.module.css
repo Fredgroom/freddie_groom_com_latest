@@ -3,6 +3,7 @@
   text-decoration: none;
   margin: 0;
   padding: 1em;
+  width: 100%;
   border-bottom: 1px solid var(--secondary);
   @media screen and (min-width: 600px) {
     border-bottom: none;

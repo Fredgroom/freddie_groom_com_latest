@@ -3,7 +3,6 @@ import { FC } from 'react';
 import RootLayout from './layout';
 import './globals.css';
 import { Poppins } from 'next/font/google';
-import Background from '@/components/Background';
 
 const poppins = Poppins({
   weight: '400',

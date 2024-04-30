@@ -1,4 +1,5 @@
 import ContentCard from '@/components/ContentCard';
+import FigmaSVG from '@/svg/FigmaSVG';
 import ReactSVG from '@/svg/ReactSVG';
 
 const About = () => {
@@ -11,42 +12,42 @@ const About = () => {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: '1fr 100px',
+            gridTemplateColumns: '64px auto',
             alignItems: 'center',
+            margin: '1em 0',
+            gap: '16px',
           }}
         >
-          <div>
-            <p>
-              An experienced user-focused developer building responsive
-              data-driven web applications with React and TypeScript equally
-              comfortable refactoring existing projects or building products
-              from scratch.
-            </p>
-            <p>
-              I am equally comfortable working independently or within teams.
-            </p>
-            <p>
-              I consistently 'go the extra mile' to meet project deadlines when
-              requirements need to be extended
-            </p>
-          </div>
           <ReactSVG />
+          <p>
+            A passionate frontend developer, I specialise in creating
+            responsive, data-driven web apps using React and TypeScript.
+          </p>
+        </div>
+
+        <p>
+          I champion projects from inception to completion, going the extra mile
+          to meet client expectations.
+        </p>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '64px auto',
+            alignItems: 'center',
+            margin: '1em 0',
+            gap: '16px',
+          }}
+        >
+          <FigmaSVG />
+          <p>
+            I prioritise efficient software development processes, teaching
+            colleagues UX/UI design and Figma, which enhances design quality,
+            foster s collaboration, and expedites client feedback.
+          </p>
         </div>
         <p>
-          I have a keen appreciation for UX/UI design, demonstrated through my
-          initiative in teaching colleagues Figma to improve software design
-          processes. My diverse background, including coaching and studying
-          osteopathy, enhances my problem-solving and interpersonal skills,
-          proving invaluable for delivering features, managing and mentoring
-          colleagues and interacting with clients. In my free time, I explore
-          new technologies and build projects for charity.
-        </p>
-        <p>
-          I relocated from London to Canberra in 2023 and focussed the time
-          applying for permanent residency expanding my back-end skill set, to
-          deliver full-stack apps, through online courses and I started a
-          part-time bachelor&apos;s degree to broaden my understanding of
-          computer science.
+          I enthusiastically support, manage, and mentor colleagues, bringing
+          extensive experience in direct client interactions.
         </p>
         <p>References are available on request.</p>
       </ContentCard>

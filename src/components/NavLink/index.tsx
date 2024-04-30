@@ -8,11 +8,9 @@ interface NavLinkProps {
 
 const NavLink = ({ href, children }: NavLinkProps) => {
   return (
-    <>
-      <Link href={href} className={styles.navLink}>
-        {children}
-      </Link>
-    </>
+    <Link href={href} className={styles.navLink}>
+      {children}
+    </Link>
   );
 };
 

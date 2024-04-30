@@ -9,6 +9,11 @@
   max-width: 700px;
 }
 
+.contentCardWrapper {
+  padding: 1em;
+  background-color: var(--primary);
+}
+
 .title {
   box-shadow: 4px 4px var(--secondary);
   box-shadow: none;

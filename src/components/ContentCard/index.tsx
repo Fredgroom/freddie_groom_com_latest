@@ -10,14 +10,16 @@ const ContentCard = ({
   title?: boolean;
 }) => {
   return (
-    <div
-      className={`
+    <div className={styles.contentCardWrapper}>
+      <div
+        className={`
       ${styles.contentCard}
       ${invertedColor && styles.invertedContentCard}
       ${title && styles.title}
       `}
-    >
-      {children}
+      >
+        {children}
+      </div>
     </div>
   );
 };
