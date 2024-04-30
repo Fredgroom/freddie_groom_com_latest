@@ -2,7 +2,7 @@
   box-sizing: border-box;
   background-color: var(--primary);
   color: var(--secondary);
-  padding: 0 16px;
+  padding: 16px;
   /* box-shadow: 4px 4px var(--secondary); */
   border: 1px solid var(--secondary);
   width: 100%;

@@ -6,8 +6,6 @@ const FigmaSVG = () => {
       id='Layer_1'
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 200 300'
-      width='auto'
-      height='75'
       className={styles.svg}
     >
       <path
