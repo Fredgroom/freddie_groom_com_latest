@@ -4,11 +4,12 @@ import styles from './NavLink.module.css';
 interface NavLinkProps {
   href: string;
   children: string;
+  onClick: () => void;
 }
 
-const NavLink = ({ href, children }: NavLinkProps) => {
+const NavLink = ({ href, children, onClick }: NavLinkProps) => {
   return (
-    <Link href={href} className={styles.navLink}>
+    <Link href={href} className={styles.navLink} onClick={() => onClick()}>
       {children}
     </Link>
   );

@@ -3,14 +3,22 @@ import NavLink from '../NavLink';
 import styles from './header.module.css';
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 
-const MobileMenu = () => {
+const MobileMenu = ({ closeMenu }: NavProps) => {
   return (
     <div className={styles.mobileMenu}>
       <nav className={styles.mobileNav}>
-        <NavLink href='/'>Home</NavLink>
-        <NavLink href='/projects'>Projects</NavLink>
-        <NavLink href='/about'>About</NavLink>
-        <NavLink href='/contact'>Contact</NavLink>
+        <NavLink onClick={closeMenu} href='/'>
+          Home
+        </NavLink>
+        <NavLink onClick={closeMenu} href='/projects'>
+          Projects
+        </NavLink>
+        <NavLink onClick={closeMenu} href='/about'>
+          About
+        </NavLink>
+        <NavLink onClick={closeMenu} href='/contact'>
+          Contact
+        </NavLink>
       </nav>
     </div>
   );
@@ -37,7 +45,7 @@ const MobileMenuToggle = ({ menuOpen, setMenuOpen }: MobileMenuToggleProps) => {
         stroke-width='2'
       >
         <path
-          stroke-linecap='round'
+          strokeLinecap='round'
           stroke-linejoin='round'
           d='M4 6h16M4 12h16m-16 6h16'
         />
@@ -60,13 +68,25 @@ const MobileMenuToggle = ({ menuOpen, setMenuOpen }: MobileMenuToggleProps) => {
   );
 };
 
-const Nav = () => {
+interface NavProps {
+  closeMenu: () => void;
+}
+
+const Nav = ({ closeMenu }: NavProps) => {
   return (
     <nav className={styles.menu}>
-      <NavLink href='/'>Home</NavLink>
-      <NavLink href='/projects'>Projects</NavLink>
-      <NavLink href='/about'>About</NavLink>
-      <NavLink href='/contact'>Contact</NavLink>
+      <NavLink href='/' onClick={closeMenu}>
+        Home
+      </NavLink>
+      <NavLink href='/projects' onClick={closeMenu}>
+        Projects
+      </NavLink>
+      <NavLink href='/about' onClick={closeMenu}>
+        About
+      </NavLink>
+      <NavLink href='/contact' onClick={closeMenu}>
+        Contact
+      </NavLink>
     </nav>
   );
 };
@@ -74,6 +94,10 @@ const Nav = () => {
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const divRef = useRef<HTMLDivElement>(null);
+
+  const closeMenu: () => void = () => {
+    setMenuOpen(false);
+  };
 
   const handleClickOutside = (event: MouseEvent) => {
     if (divRef.current && !divRef.current.contains(event.target as Node)) {
@@ -96,11 +120,11 @@ const Header = () => {
             PORTFOLIO
             {/* SOFTWARE DEVELOPER PORTFOLIO{' '} */}
           </Link>
-          <Nav />
+          <Nav closeMenu={closeMenu} />
           <MobileMenuToggle menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         </div>
       </div>
-      {menuOpen && <MobileMenu />}
+      {menuOpen && <MobileMenu closeMenu={closeMenu} />}
     </header>
   );
 };

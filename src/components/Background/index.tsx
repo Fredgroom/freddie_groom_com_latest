@@ -54,7 +54,6 @@ const Background = ({ children }: BackgroundProps) => {
             />
           );
         })}
-      {/* <div className={styles.background_content_wrapper}>{children}</div> */}
       <div className={styles.background_content_wrapper}>{children}</div>
     </main>
   );

@@ -86,3 +86,10 @@ img {
 .bold {
   font-weight: bold;
 }
+
+h1 {
+  margin: 0;
+  @media screen and (min-width: 480px) {
+    margin: 1em 0;
+  }
+}
