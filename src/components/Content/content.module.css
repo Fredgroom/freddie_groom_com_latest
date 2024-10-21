@@ -9,7 +9,7 @@
 }
 
 .content_spacer {
-  height: 50px;
+  /* height: 50px; */ display: 0;
   @media screen and (min-width: 480px) {
     height: 100px;
   }
