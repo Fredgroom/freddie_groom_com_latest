@@ -12,7 +12,8 @@ type RootLayoutProps = {
 
 const RootLayout = ({ children, pageTitle }: RootLayoutProps) => {
   return (
-    <Background>
+    <>
+      {/* <Background> */}
       <Head>
         <title>
           {pageTitle ? `${pageTitle} | FreddieGroom.com` : 'FreddieGroom.com'}
@@ -26,7 +27,8 @@ const RootLayout = ({ children, pageTitle }: RootLayoutProps) => {
       <Header />
       <Content>{children}</Content>
       <Footer />
-    </Background>
+      {/* </Background> */}
+    </>
   );
 };
 

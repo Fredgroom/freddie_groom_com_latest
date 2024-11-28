@@ -5,8 +5,8 @@ const Home = () => {
   return (
     <>
       <ContentCard title>
-        <h1 className={styles.heading}>Freddie Groom</h1>
-        <h2>Software Developer</h2>
+        <h1 className={styles.heading}>FREDDIE GROOM</h1>
+        <h2>Frontend Developer</h2>
       </ContentCard>
     </>
   );
