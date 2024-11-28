@@ -21,18 +21,16 @@ const RootLayout = ({ children, pageTitle }: RootLayoutProps) => {
           content='This is an example site using Next.js'
         />
       </Head>
-      <body className='bg-secondary'>
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='light'
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Header />
-          {children}
-          <Footer />
-        </ThemeProvider>
-      </body>
+      <ThemeProvider
+        attribute='class'
+        defaultTheme='light'
+        enableSystem
+        disableTransitionOnChange
+      >
+        <Header />
+        <div className='my-12 px-4'>{children}</div>
+        <Footer />
+      </ThemeProvider>
     </>
   );
 };

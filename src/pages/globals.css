@@ -10,6 +10,10 @@
   --green: #0cf574;
 }
 
+* {
+  word-wrap: break-word;
+}
+
 svg {
   fill: var(--secondary);
 }

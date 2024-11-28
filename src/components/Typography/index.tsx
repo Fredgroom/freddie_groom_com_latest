@@ -1,74 +1,69 @@
-export function H1() {
+import { ReactNode } from 'react';
+
+interface Typography {
+  children: ReactNode;
+}
+
+export function H1({ children }: Typography) {
   return (
     <h1 className='scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl'>
-      Taxing Laughter: The Joke Tax Chronicles
+      {children}
     </h1>
   );
 }
-export function H2() {
+export function H2({ children }: Typography) {
   return (
-    <h2 className='scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0'>
-      The People of the Kingdom
+    <h2 className='scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 my-11'>
+      {children}{' '}
     </h2>
   );
 }
-export function H3() {
+export function H3({ children }: Typography) {
   return (
-    <h3 className='scroll-m-20 text-2xl font-semibold tracking-tight'>
-      The Joke Tax
+    <h3 className='scroll-m-20 text-2xl font-semibold tracking-tight my-4'>
+      {children}{' '}
     </h3>
   );
 }
 
-export function H4() {
+export function H4({ children }: Typography) {
   return (
     <h4 className='scroll-m-20 text-xl font-semibold tracking-tight'>
-      People stopped telling jokes
+      {children}
     </h4>
   );
 }
 
-export function P() {
-  return (
-    <p className='leading-7 [&:not(:first-child)]:mt-6'>
-      The king, seeing how much happier his subjects were, realized the error of
-      his ways and repealed the joke tax.
-    </p>
-  );
+export function P({ children }: Typography) {
+  return <p className='leading-7 [&:not(:first-child)]:mt-6'>{children}</p>;
 }
 
-export function Blockquote() {
+export function Blockquote({ children }: Typography) {
   return (
-    <blockquote className='mt-6 border-l-2 pl-6 italic'>
-      "After all," he said, "everyone enjoys a good joke, so it's only fair that
-      they should pay for the privilege."
+    <blockquote className='mt-6 border-l-2 pl-6 italic flex'>
+      {children}
     </blockquote>
   );
 }
 
-export function InlineCode() {
+export function InlineCode({ children }: Typography) {
   return (
     <code className='relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold'>
-      @radix-ui/react-alert-dialog
+      {children}
     </code>
   );
 }
 
-export function Lead() {
-  return (
-    <p className='text-xl text-muted-foreground'>
-      A modal dialog that interrupts the user with important content and expects
-      a response.
-    </p>
-  );
+export function Lead({ children }: Typography) {
+  return <p className='text-xl text-muted-foreground'>{children}</p>;
 }
 
-export function Large() {
-  return <div className='text-lg font-semibold'>Are you absolutely sure?</div>;
+export function Large({ children }: Typography) {
+  return <div className='text-lg font-semibold'> {children}</div>;
 }
 
-export function Small() {
+export function Small({ children }: Typography) {
   return (
-    <small className='text-sm font-medium leading-none'>Email address</small>
+    <small className='text-sm font-medium leading-none'> {children}</small>
   );
 }

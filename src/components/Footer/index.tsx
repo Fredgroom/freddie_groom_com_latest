@@ -1,23 +1,19 @@
 import Download from '../Download';
 import Github from '../Github';
 import LinkedIn from '../LinkedIn';
-import styles from './footer.module.css';
+import { P } from '../Typography';
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.footer_outer}>
-        <div className={styles.footer_inner}>
-          <div>
-            <p>Fredgroom@gmail.com</p>
-            <p>&copy; {new Date().getFullYear()} freddiegroom.com</p>
-          </div>
-          <div className={styles.footer_link_wrapper}>
-            <LinkedIn />
-            <Github />
-            <Download />
-          </div>
-        </div>
+    <footer className='flex pt-11 px-8 py-4 justify-between'>
+      <div>
+        <P>Fredgroom@gmail.com</P>
+        <P>&copy; {new Date().getFullYear()} freddiegroom.com</P>
+      </div>
+      <div className='flex items-center '>
+        <LinkedIn />
+        <Github />
+        <Download />
       </div>
     </footer>
   );
