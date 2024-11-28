@@ -2,8 +2,7 @@ import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Background from '@/components/Background';
-import Content from '@/components/Content';
+import { ThemeProvider } from '@/components/theme-provider.tsx';
 
 type RootLayoutProps = {
   children: ReactNode;
@@ -13,7 +12,6 @@ type RootLayoutProps = {
 const RootLayout = ({ children, pageTitle }: RootLayoutProps) => {
   return (
     <>
-      {/* <Background> */}
       <Head>
         <title>
           {pageTitle ? `${pageTitle} | FreddieGroom.com` : 'FreddieGroom.com'}
@@ -22,12 +20,19 @@ const RootLayout = ({ children, pageTitle }: RootLayoutProps) => {
           name='Freddie Groom . com'
           content='This is an example site using Next.js'
         />
-        {/* Add any global tags you want to include in every page */}
       </Head>
-      <Header />
-      <Content>{children}</Content>
-      <Footer />
-      {/* </Background> */}
+      <body className='bg-secondary'>
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='light'
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
+      </body>
     </>
   );
 };

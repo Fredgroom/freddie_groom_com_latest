@@ -2,6 +2,7 @@ import Link from 'next/link';
 import NavLink from '../NavLink';
 import styles from './header.module.css';
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
+import { ThemeSwitcher } from '../themeSwitcher';
 
 const MobileMenu = ({ closeMenu }: NavProps) => {
   return (
@@ -123,6 +124,7 @@ const Header = () => {
           <Nav closeMenu={closeMenu} />
           <MobileMenuToggle menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         </div>
+        <ThemeSwitcher />
       </div>
       {menuOpen && <MobileMenu closeMenu={closeMenu} />}
     </header>

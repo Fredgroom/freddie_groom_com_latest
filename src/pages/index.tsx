@@ -1,13 +1,21 @@
 import ContentCard from '@/components/ContentCard';
-import styles from './home.module.css';
+import { Button } from '@/components/ui/button';
 
 const Home = () => {
   return (
     <>
-      <ContentCard title>
-        <h1 className={styles.heading}>FREDDIE GROOM</h1>
-        <h2>Frontend Developer</h2>
-      </ContentCard>
+      <h1 className='text-9xl'>Hi, I'm Freddie a Frontend Developer</h1>
+      <h1>I Turn Designs into Functional, Accessible Products</h1>
+      {/* <Button>This is a test</Button>
+        <Button variant='default'>This is a test</Button>
+        <Button variant='default'>This is a test</Button> */}
+      <Button variant='destructive'>This is a test</Button>
+      <Button variant='destructive'>Destructive</Button>
+      <Button variant='destructive'>This is a test</Button>
+      {/* <Button variant='ghost'>This is a test</Button>
+        <Button variant='link'>This is a test</Button>
+        <Button variant='outline'>This is a test</Button>
+        <Button variant='secondary'>This is a test</Button> */}
     </>
   );
 };
