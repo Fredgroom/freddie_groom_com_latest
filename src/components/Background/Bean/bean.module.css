@@ -2,7 +2,7 @@
   height: 12px;
   width: 6px;
   border-radius: 2px;
-  background-color: var(--secondary);
+  background-color: hsl(var(--secondary));
   position: absolute;
   animation: animateBean 1.5s linear infinite;
 }
@@ -62,5 +62,5 @@
   background-color: var(--green);
 }
 .primary {
-  background-color: var(--primary);
+  background-color: hsl(var(--primary));
 }

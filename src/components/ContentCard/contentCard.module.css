@@ -1,10 +1,10 @@
 .contentCard {
   box-sizing: border-box;
-  background-color: var(--primary);
-  color: var(--secondary);
+  background-color: hsl(var(--primary));
+  color: hsl(var(--secondary));
   padding: 16px 32px;
-  /* box-shadow: 4px 4px var(--secondary); */
-  border: 1px solid var(--secondary);
+  /* box-shadow: 4px 4pxhsl(var(--secondary)); */
+  border: 1px solidhsl(var(--secondary));
   width: 100%;
   max-width: 700px;
   display: border-box;
@@ -12,24 +12,24 @@
 
 .contentCardWrapper {
   padding: 1em;
-  background-color: var(--primary);
+  background-color: hsl(var(--primary));
 }
 
 .title {
-  box-shadow: 4px 4px var(--secondary);
+  box-shadow: 4px 4pxhsl (var(--secondary));
   box-shadow: none;
   border: 12px solid green;
-  border: 1px solid var(--secondary);
-  box-shadow: 4px 4px var(--secondary);
+  border: 1px solidhsl(var(--secondary));
+  box-shadow: 4px 4pxhsl (var(--secondary));
   display: inline-block;
   text-align: center;
 }
 
 .invertedContentCard {
-  background-color: var(--secondary);
-  color: var(--primary);
-  box-shadow: 8px 8px var(--primary);
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--primary));
+  box-shadow: 8px 8pxhsl (var(--primary));
   box-shadow: none;
-  border: 2px solid var(--primary);
+  border: 2px solidhsl(var(--primary));
   padding: 0 16px;
 }

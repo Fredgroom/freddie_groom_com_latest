@@ -1,164 +1,171 @@
 import { ReactNode } from 'react';
-import { H2, H3 } from '../components/Typography/index';
+import { H2 } from '../components/Typography/index';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
-const SkillContainer = ({ children }: { children: ReactNode }) => {
-  return <div className='flex flex-wrap'>{children}</div>;
+const TechRow = ({
+  // children,
+  text = 'EMPTY_TEXT',
+  link,
+  alt,
+}: {
+  // children: ReactNode;
+  text: string;
+  link: string;
+  alt: string;
+}) => {
+  return (
+    <div className='flex items-center'>
+      <p className='pr-2'>{text}</p>
+      <img src={link} className='h-10 w-10' alt={alt} />
+    </div>
+  );
 };
 
 const Home = () => {
   return (
     <>
-      <h1 className='text-8xl break-words mb-8 text-center'>
-        Hi, I'm Freddie a Frontend Developer
-      </h1>
-      <h1 className='text-4xl break-words m-0 text-center'>
-        I Turn Designs into Functional, Accessible Products
-      </h1>
+      <div className='py-24 mb-48'>
+        <h1 className='text-8xl break-words mb-8 text-center'>
+          Hi, I'm Freddie.
+        </h1>
+        <h2 className='text-4xl break-words m-0 text-center'>
+          I turn your designs into products.
+        </h2>
+      </div>
       <div className='max-w-[940px]'>
-        <H2>Skills</H2>
-        <div className='flex justify-center'>
-          <div>
-            <H3>Frontend</H3>
-            <SkillContainer>
-              <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
-                height='40'
-                alt='react logo'
+        <H2>Tech I've used</H2>
+        <div className='flex flex-col justify-center gap-4'>
+          <Card>
+            <CardHeader>
+              <CardTitle>Frontend</CardTitle>
+            </CardHeader>
+            <CardContent className='flex gap-4 flex-wrap'>
+              <TechRow
+                text='ReactJS'
+                link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
+                alt='React logo'
               />
-              <div className='w-4' />
-              <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg'
-                height='40'
-                alt='nextjs logo'
+              <TechRow
+                text='Next.js'
+                link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg'
+                alt='next.js logo'
               />
-              <div className='w-4' />
-              <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
-                height='40'
+              <TechRow
+                text='JavaScript'
                 alt='javascript logo'
+                link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
               />
-              <div className='w-4' />
-              <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'
-                height='40'
+              <TechRow
+                text='TypeScript'
                 alt='typescript logo'
+                link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'
               />
-              <div className='w-4' />
-              <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'
-                height='40'
-                alt='css3 logo'
+              <TechRow
+                text='CSS3'
+                alt='CSS3 logo'
+                link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'
               />
-              <div className='w-4' />
-              <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'
-                height='40'
-                alt='html5 logo'
+              <TechRow
+                text='HTML5'
+                alt='HTML5 logo'
+                link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'
               />
-            </SkillContainer>
-            <div className='h-4' />
-            <SkillContainer>
-              <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg'
-                height='40'
+              <TechRow
+                text='TailwindCSS'
                 alt='tailwindcss logo'
+                link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg'
               />
-              <div className='w-4' />
-              <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg'
-                height='40'
+              <TechRow
+                text='Sass'
                 alt='sass logo'
+                link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg'
               />
-              <div className='w-4' />
-              <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg'
-                height='40'
+              <TechRow
+                text='Storybook'
                 alt='storybook logo'
+                link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg'
               />
-              <div className='w-4' />
-              <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain.svg'
-                height='40'
+              <TechRow
+                text='JQuery'
                 alt='jquery logo'
+                link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain.svg'
               />
-              <div className='w-4' />
-              <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg'
-                height='40'
+              <TechRow
+                text='Redux'
                 alt='redux logo'
+                link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg'
               />
-              <div className='w-4' />
-              <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'
-                height='40'
+              <TechRow
+                text='Figma'
                 alt='figma logo'
+                link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'
               />
-            </SkillContainer>
-            <H3>Backend</H3>
-            <SkillContainer>
-              <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg'
-                height='40'
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>Backend</CardTitle>
+            </CardHeader>
+            <CardContent className='flex flex-wrap gap-4'>
+              <TechRow
+                text='NodeJs'
                 alt='nodejs logo'
+                link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg'
               />
-              <div className='w-4' />
-              <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain-wordmark.svg'
-                height='40'
+              <TechRow
+                text='MongoDB'
                 alt='mongodb logo'
+                link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain-wordmark.svg'
               />
-              <div className='w-4' />
-              <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain-wordmark.svg'
-                height='40'
-                alt='mongodb logo'
+              <TechRow
+                text='PostgreSQL'
+                alt='postgres logo'
+                link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain-wordmark.svg'
               />
-              <div className='w-4' />
-              <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-plain-wordmark.svg'
-                height='40'
-                alt='mongodb logo'
+              <TechRow
+                text='Redis'
+                alt='redis logo'
+                link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-plain-wordmark.svg'
               />
-              <div className='w-4' />
-              <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg'
-                height='40'
+              <TechRow
+                text='ExpressJS'
                 alt='express logo'
+                link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg'
               />
-            </SkillContainer>
-            <H3>Tools</H3>
-            <SkillContainer>
-              <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain.svg'
-                height='40'
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>Tools</CardTitle>
+            </CardHeader>
+            <CardContent className='flex flex-wrap gap-4'>
+              <TechRow
+                text='Git'
                 alt='git logo'
+                link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain.svg'
               />
-              <div className='w-4' />
-              <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg'
-                height='40'
+              <TechRow
+                text='Vite'
                 alt='vite logo'
+                link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg'
               />
-              <div className='w-4' />
-              <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/yarn/yarn-original.svg'
-                height='40'
+              <TechRow
+                text='Yarn'
                 alt='yarn logo'
+                link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/yarn/yarn-original.svg'
               />
-              <div className='w-4' />
-              <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg'
-                height='40'
-                alt='visual studio code logo'
+              <TechRow
+                text='Vscode'
+                alt='vscode logo'
+                link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg'
               />
-              <div className='w-4' />
-              <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg'
-                height='40'
+              <TechRow
+                text='Jest'
                 alt='jest logo'
+                link='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg'
               />
-            </SkillContainer>
-          </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </>

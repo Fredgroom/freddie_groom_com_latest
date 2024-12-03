@@ -8,5 +8,5 @@
 .darkSVG {
   max-width: 100px;
   max-height: 100px;
-  fill: var(--primary);
+  fill: hsl(var(--primary));
 }

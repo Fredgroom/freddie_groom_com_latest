@@ -14,7 +14,7 @@ export function ThemeSwitcher() {
   if (!mounted) return null;
 
   return (
-    <div>
+    <div className='px-4'>
       {theme == 'dark' && (
         <Button variant='outline' onClick={() => setTheme('light')}>
           <Sun />
