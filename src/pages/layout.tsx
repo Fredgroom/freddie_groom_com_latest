@@ -11,7 +11,7 @@ type RootLayoutProps = {
 
 const RootLayout = ({ children, pageTitle }: RootLayoutProps) => {
   return (
-    <>
+    <div className='min-h-full flex flex-col justify-between'>
       <Head>
         <title>
           {pageTitle ? `${pageTitle} | FreddieGroom.com` : 'FreddieGroom.com'}
@@ -31,7 +31,7 @@ const RootLayout = ({ children, pageTitle }: RootLayoutProps) => {
         <div className='my-12 px-4 flex flex-col items-center'>{children}</div>
         <Footer />
       </ThemeProvider>
-    </>
+    </div>
   );
 };
 
