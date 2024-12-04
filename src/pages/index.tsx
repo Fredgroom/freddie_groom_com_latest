@@ -35,7 +35,7 @@ const Home = () => {
           aria-label='Send Freddie an email'
         >
           <Button variant='outline' className='text-lg py-5'>
-            Send me an email
+            Email me
           </Button>
         </a>
       </div>

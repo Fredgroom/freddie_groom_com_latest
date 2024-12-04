@@ -13,7 +13,7 @@ const Download = () => {
         download
         aria-label='download pdf of resume'
       >
-        Resume
+        CV
       </Link>
     </Button>
   );
