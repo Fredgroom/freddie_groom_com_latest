@@ -7,7 +7,7 @@ import Link from 'next/link';
 const Home = () => {
   return (
     <>
-      <div className='py-24 mb-48'>
+      <div className='overflow-x-hidden'>
         <h1 className='text-8xl break-words mb-8 text-center'>
           Hi, I'm Freddie
         </h1>

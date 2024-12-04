@@ -3,6 +3,7 @@ import { FC } from 'react';
 import RootLayout from './layout';
 import './globals.css';
 import { Poppins } from 'next/font/google';
+import Head from 'next/head';
 
 const poppins = Poppins({
   weight: '400',
@@ -12,9 +13,11 @@ const poppins = Poppins({
 });
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <RootLayout>
-      <Component {...pageProps} />
-    </RootLayout>
+    <>
+      <RootLayout>
+        <Component {...pageProps} />
+      </RootLayout>
+    </>
   );
 };
 

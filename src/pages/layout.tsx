@@ -11,8 +11,9 @@ type RootLayoutProps = {
 
 const RootLayout = ({ children, pageTitle }: RootLayoutProps) => {
   return (
-    <div className='min-h-full flex flex-col justify-between'>
+    <div className='min-h-full flex flex-col justify-between overflow-x-hidden'>
       <Head>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>
           {pageTitle
             ? `${pageTitle} | FreddieGroom.com`
@@ -30,7 +31,7 @@ const RootLayout = ({ children, pageTitle }: RootLayoutProps) => {
         disableTransitionOnChange
       >
         <Header />
-        <div className='px-4 flex column justify-center items-center'>
+        <div className=' px-4 flex column justify-center items-center'>
           {children}
         </div>
         <Footer />
