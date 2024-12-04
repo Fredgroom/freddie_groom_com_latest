@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils';
 import Marquee from './ui/marquee';
+import Image from 'next/image';
 
 const skills = [
   {
@@ -134,7 +135,7 @@ const SkillCard = ({
       )}
     >
       <div className='flex flex-row items-center gap-2'>
-        <img
+        <Image
           className='rounded-full'
           width='32'
           height='32'

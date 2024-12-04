@@ -14,7 +14,9 @@ const RootLayout = ({ children, pageTitle }: RootLayoutProps) => {
     <div className='min-h-full flex flex-col justify-between'>
       <Head>
         <title>
-          {pageTitle ? `${pageTitle} | FreddieGroom.com` : 'FreddieGroom.com'}
+          {pageTitle
+            ? `${pageTitle} | FreddieGroom.com`
+            : 'Portfolio | FreddieGroom.com'}
         </title>
         <meta
           name='Freddie Groom . com'
