@@ -16,7 +16,7 @@
 }
 .background_inner {
   font-weight: bold;
-  background-color: var(--primary);
+  background-color: hsl(var(--primary));
   z-index: 99;
   padding: 1em;
 }

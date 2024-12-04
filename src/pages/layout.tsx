@@ -2,8 +2,7 @@ import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Background from '@/components/Background';
-import Content from '@/components/Content';
+import { ThemeProvider } from '@/components/theme-provider.tsx';
 
 type RootLayoutProps = {
   children: ReactNode;
@@ -12,8 +11,7 @@ type RootLayoutProps = {
 
 const RootLayout = ({ children, pageTitle }: RootLayoutProps) => {
   return (
-    <>
-      {/* <Background> */}
+    <div className='min-h-full flex flex-col justify-between'>
       <Head>
         <title>
           {pageTitle ? `${pageTitle} | FreddieGroom.com` : 'FreddieGroom.com'}
@@ -22,13 +20,20 @@ const RootLayout = ({ children, pageTitle }: RootLayoutProps) => {
           name='Freddie Groom . com'
           content='This is an example site using Next.js'
         />
-        {/* Add any global tags you want to include in every page */}
       </Head>
-      <Header />
-      <Content>{children}</Content>
-      <Footer />
-      {/* </Background> */}
-    </>
+      <ThemeProvider
+        attribute='class'
+        defaultTheme='light'
+        enableSystem
+        disableTransitionOnChange
+      >
+        <Header />
+        <div className='px-4 flex column justify-center items-center'>
+          {children}
+        </div>
+        <Footer />
+      </ThemeProvider>
+    </div>
   );
 };
 

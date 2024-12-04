@@ -1,20 +1,19 @@
 import Link from 'next/link';
-import styles from './download.module.css';
+import { Button } from '../ui/button';
 
 const Download = () => {
   return (
-    // <div className={styles.download_wrapper}>
-    <Link
-      className={styles.download}
-      href={'/freddie_groom_cv.pdf'}
-      target='_blank'
-      rel='noopener noreferrer'
-      locale={false}
-      download
-    >
-      Resume
-    </Link>
-    // </div>
+    <Button variant='outline' className='text-lg bold'>
+      <Link
+        href={'/freddie_groom_cv.pdf'}
+        target='_blank'
+        rel='noopener noreferrer'
+        locale={false}
+        download
+      >
+        Resume
+      </Link>
+    </Button>
   );
 };
 

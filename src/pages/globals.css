@@ -1,109 +1,33 @@
-:root {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
   --primary: #1f2022;
   --secondary: #ebefbf;
   --blue: #1ccad8;
   --orange: #e57a44;
   --green: #0cf574;
-}
+} */
 
-svg {
-  fill: var(--secondary);
-}
-
-html {
-  height: 100vh;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: var(--primary);
-  color: var(--secondary);
-  margin: 0;
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr;
-}
-
-h1 {
-  font-weight: 700;
-}
-
-#_next {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr;
-  min-height: 100vh;
-}
-
-img {
-  width: 50px;
-}
-
-.linkImage {
-  fill: #ebefbf;
-  width: 32px;
-  height: 32px;
-  @media screen and (min-width: 480px) {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-.link {
-  color: var(--secondary);
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.buttonLink_wrapper {
-  padding: 1em 0;
-}
-
-.buttonLink {
-  color: var(--primary);
-  font-weight: bold;
-  padding: 16px 32px;
-  border: 1px solid var(--primary);
-  background-color: var(--secondary);
-  text-decoration: none;
-  cursor: pointer;
-}
-.buttonLink:hover {
-  color: var(--secondary);
-  border: 1px solid var(--secondary);
-  background-color: var(--primary);
-}
-
-.logoLink {
-  /* padding: 0.5em; */
-  @media screen and (min-width: 480px) {
-    padding: 1em;
-  }
-}
-
-.bold {
-  font-weight: bold;
-}
-
-h1 {
-  margin: 0;
-  @media screen and (min-width: 480px) {
-    margin: 1em 0;
-  }
-}
+/* :root {
+  --primary: hsl(210 5% 13%);
+  --secondary: hsl(65 64% 80%);
+  --blue: hsl(186 77% 49%);
+  --orange: hsl(21 74% 60%);
+  --green: hsl(151 94% 49%);
+} */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
+    --background: 100 100% 100%;
+    --foreground: 210 5% 13%;
+    --card: 65 64% 80%;
     --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
+    --popover: 65 64% 80%;
     --popover-foreground: 0 0% 3.9%;
     --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
+    --primary-foreground: 210 5% 13%;
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96.1%;
@@ -112,7 +36,7 @@ h1 {
     --accent-foreground: 0 0% 9%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
+    --border: 210 5% 13%;
     --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
     --chart-1: 12 76% 61%;
@@ -123,24 +47,24 @@ h1 {
     --radius: 0.5rem;
   }
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: 210 5% 13%;
+    --foreground: 65 64% 80%;
     --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card-foreground: 65 64% 80%;
     --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
+    --popover-foreground: 65 64% 80%;
+    --primary: 210 5% 13%;
+    --primary-foreground: 65 64% 80%;
     --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary-foreground: 65 64% 80%;
     --muted: 0 0% 14.9%;
     --muted-foreground: 0 0% 63.9%;
     --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent-foreground: 65 64% 80%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
+    --destructive-foreground: 65 64% 80%;
+    --border: 65 64% 80%;
+    --input: 65 64% 80%;
     --ring: 0 0% 83.1%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
@@ -149,12 +73,34 @@ h1 {
     --chart-5: 340 75% 55%;
   }
 }
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr;
+  color: hsl(var(--foreground));
+}
+* {
+  word-wrap: break-word;
+}
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+svg {
+  fill: hsl(var(--foreground));
+}
+
+html {
+  height: 100vh;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+.buttonLink_wrapper {
+  padding: 1em 0;
 }

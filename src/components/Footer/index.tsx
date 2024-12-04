@@ -1,23 +1,23 @@
 import Download from '../Download';
-import Github from '../Github';
-import LinkedIn from '../LinkedIn';
-import styles from './footer.module.css';
+import { Large } from '../Typography';
+import { Toaster } from '../ui/toaster';
+import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.footer_outer}>
-        <div className={styles.footer_inner}>
-          <div>
-            <p>Fredgroom@gmail.com</p>
-            <p>&copy; {new Date().getFullYear()} freddiegroom.com</p>
-          </div>
-          <div className={styles.footer_link_wrapper}>
-            <LinkedIn />
-            <Github />
-            <Download />
-          </div>
-        </div>
+    <footer className='flex pt-11 px-8 py-4 justify-between items-center'>
+      <div>
+        <Large>&copy; {new Date().getFullYear()} freddiegroom.com</Large>
+      </div>
+      <div className='flex items-center gap-4'>
+        <Link href='https://github.com/fredgroom'>
+          <GitHubLogoIcon className='w-12 h-12' />
+        </Link>
+        <Link href='https://www.linkedin.com/in/freddie-groom/'>
+          <LinkedInLogoIcon className='w-12 h-12' />
+        </Link>
+        <Download />
       </div>
     </footer>
   );
