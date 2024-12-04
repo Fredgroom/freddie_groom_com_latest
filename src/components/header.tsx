@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { Button } from '../ui/button';
-import { ThemeSwitcher } from '../themeSwitcher';
+import { Button } from './ui/button';
+import { ThemeSwitcher } from './themeSwitcher';
 
 interface NavLinkProps {
   href: string;

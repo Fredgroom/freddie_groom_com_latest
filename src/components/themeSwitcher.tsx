@@ -1,7 +1,7 @@
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 import { Button } from './ui/button';
-import { Moon, MoonIcon, Sun } from 'lucide-react';
+import { Moon, Sun } from 'lucide-react';
 
 export function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
@@ -16,12 +16,20 @@ export function ThemeSwitcher() {
   return (
     <div className='px-4'>
       {theme == 'dark' && (
-        <Button variant='outline' onClick={() => setTheme('light')}>
+        <Button
+          variant='outline'
+          onClick={() => setTheme('light')}
+          aria-label='Switch to dark mode'
+        >
           <Sun />
         </Button>
       )}
       {theme == 'light' && (
-        <Button variant='outline' onClick={() => setTheme('dark')}>
+        <Button
+          variant='outline'
+          onClick={() => setTheme('dark')}
+          aria-label='Switch to light mode'
+        >
           <Moon />
         </Button>
       )}

@@ -1,4 +1,4 @@
-import Download from '@/components/Download';
+import Download from '@/components/download';
 import Skills from '@/components/skills';
 import { Button } from '@/components/ui/button';
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
@@ -15,16 +15,25 @@ const Home = () => {
           I turn designs into products
         </h2>
         <div className='flex justify-center my-8'>
-          <div className='flex items-center gap-4'>
-            <Link href='https://github.com/fredgroom'>
+          <div className='flex items-center gap-6'>
+            <Link
+              href='https://github.com/fredgroom'
+              aria-label="go to Freddie's github profile"
+            >
               <GitHubLogoIcon className='w-12 h-12' />
             </Link>
-            <Link href='https://www.linkedin.com/in/freddie-groom/'>
+            <Link
+              href='https://www.linkedin.com/in/freddie-groom/'
+              aria-label="visit Freddie's LinkedIn profile"
+            >
               <LinkedInLogoIcon className='w-12 h-12' />
             </Link>
             <Download />
-            <a href='mailto:fredgroom@gmail.com?subject=Inquiry&body=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services%20as%20a%20frontend%20developer...'>
-              <Button variant='outline' className='text-lg'>
+            <a
+              href='mailto:fredgroom@gmail.com?subject=Inquiry&body=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services%20as%20a%20frontend%20developer...'
+              aria-label='Send Freddie an email'
+            >
+              <Button variant='outline' className='text-lg py-5'>
                 Send me an email
               </Button>
             </a>
