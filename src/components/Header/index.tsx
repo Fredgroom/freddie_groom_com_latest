@@ -25,8 +25,8 @@ const Header = () => {
     <header className='border-b-secondary flex justify-between pt-4 pb-12'>
       <nav>
         <NavLink href='/'>HOME</NavLink>
-        <NavLink href='/projects'>PROJECTS</NavLink>
-        <NavLink href='/about'>ABOUT</NavLink>
+        {/* <NavLink href='/projects'>PROJECTS</NavLink>
+        <NavLink href='/about'>ABOUT</NavLink> */}
       </nav>
       <ThemeSwitcher />
     </header>
