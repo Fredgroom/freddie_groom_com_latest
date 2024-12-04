@@ -27,8 +27,8 @@ const RootLayout = ({ children, pageTitle }: RootLayoutProps) => {
       <ThemeProvider
         attribute='class'
         //todo: change default theme to system with better light theme
-        defaultTheme='dark'
-        enableSystem={false}
+        defaultTheme='system'
+        enableSystem
         disableTransitionOnChange
       >
         <Header />
