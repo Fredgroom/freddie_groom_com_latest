@@ -160,13 +160,13 @@ const SkillCard = ({
 
 const Skills = () => {
   return (
-    <div className='max-w-screen'>
+    <div className='max-w-[90vw] flex justify-center'>
       {/* <div className='max-w-[375px] sm:max-w-[940px]'>
         <SkillMarquee />
       </div> */}
       <Marquee
         pauseOnHover
-        className='[--duration:60s] max-w-[448px] sm:max-w-[940px]'
+        className='[--duration:60s] max-w-[full] sm:max-w-[940px]'
       >
         {skills.map((skill) => (
           <SkillCard key={skill.text} {...skill} />
