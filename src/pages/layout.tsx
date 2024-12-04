@@ -32,7 +32,7 @@ const RootLayout = ({ children, pageTitle }: RootLayoutProps) => {
         disableTransitionOnChange
       >
         <Header />
-        <div className=' px-4 flex column justify-center items-center'>
+        <div className='px-4 flex column justify-center items-center'>
           {children}
         </div>
         <Footer />
