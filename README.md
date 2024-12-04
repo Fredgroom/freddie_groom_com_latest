@@ -19,4 +19,4 @@ npm run dev
 
 You can then view the app on [http://localhost:3000](http://localhost:3000).
 
-If you have any opinions please feel free to contact me at fredgroom@gmail.com
+If you have any opinions please feel free to contact me at fredgroom@gmail.com.
