@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { ThemeProvider } from '@/components/theme-provider.tsx';
+import Header from '@/components/header';
+import Footer from '@/components/footer';
+import { ThemeProvider } from '@/components/theme-provider';
 
 type RootLayoutProps = {
   children: ReactNode;

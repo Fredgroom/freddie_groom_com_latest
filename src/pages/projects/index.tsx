@@ -1,13 +1,13 @@
-import ContentCard from '@/components/ContentCard';
+import { Card } from '@/components/ui/card';
 import Link from 'next/link';
 
 const Projects = () => {
   return (
-    <>
-      <ContentCard title>
+    <div className='flex flex-col gap-4'>
+      <Card>
         <h1>Projects</h1>
-      </ContentCard>
-      <ContentCard>
+      </Card>
+      <Card>
         <h2>Ideals Charity</h2>
         <p>
           I built the website for{' '}
@@ -28,8 +28,8 @@ const Projects = () => {
             Link to Ideals website
           </Link>
         </div>
-      </ContentCard>
-      <ContentCard>
+      </Card>
+      <Card>
         <h2>Sounds Super</h2>
         <p>
           I built the website for{' '}
@@ -45,8 +45,8 @@ const Projects = () => {
             Link to Sounds Super Website
           </Link>
         </div>
-      </ContentCard>
-      <ContentCard>
+      </Card>
+      <Card>
         <h2>Portfolio website</h2>
         <p>
           I built the website for freddiegroom.com to showcase some of my skills
@@ -56,8 +56,8 @@ const Projects = () => {
         <div className='buttonLink_wrapper'>
           <h4>This is the website so you don&apos;t need a link...</h4>
         </div>
-      </ContentCard>
-    </>
+      </Card>
+    </div>
   );
 };
 export default Projects;
