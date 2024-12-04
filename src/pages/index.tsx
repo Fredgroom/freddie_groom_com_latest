@@ -7,14 +7,14 @@ import Link from 'next/link';
 const Home = () => {
   return (
     <div className='flex flex-col items-center'>
-      <h1 className='text-7xl sm:text-8xl break-words mb-4 sm:mb-8 text-center'>
+      <h1 className='text-8xl break-words mb-4 sm:mb-8 text-center'>
         Hi, I'm Freddie
       </h1>
-      <h2 className='text-5xl break-words m-0 text-center'>
+      <h2 className='text-4xl break-words m-0 text-center'>
         I turn designs into products
       </h2>
       <Skills />
-      <div className='flex flex-col items-center sm:flex-row flex-wrap justify-center sm:py-8 gap-8'>
+      <div className='flex items-center flex-wrap justify-center sm:py-8 gap-8'>
         <Link
           href='https://github.com/fredgroom'
           aria-label="go to Freddie's github profile"
