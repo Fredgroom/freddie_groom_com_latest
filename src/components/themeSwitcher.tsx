@@ -19,7 +19,7 @@ export function ThemeSwitcher() {
         <Button
           variant='outline'
           onClick={() => setTheme('light')}
-          aria-label='Switch to dark mode'
+          aria-label='Switch to light mode'
         >
           <Sun />
         </Button>
@@ -28,7 +28,7 @@ export function ThemeSwitcher() {
         <Button
           variant='outline'
           onClick={() => setTheme('dark')}
-          aria-label='Switch to light mode'
+          aria-label='Switch to dark mode'
         >
           <Moon />
         </Button>
