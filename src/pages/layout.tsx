@@ -28,7 +28,9 @@ const RootLayout = ({ children, pageTitle }: RootLayoutProps) => {
         disableTransitionOnChange
       >
         <Header />
-        <div className='my-12 px-4 flex flex-col items-center'>{children}</div>
+        <div className='px-4 flex column justify-center items-center'>
+          {children}
+        </div>
         <Footer />
       </ThemeProvider>
     </div>
