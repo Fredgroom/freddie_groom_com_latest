@@ -27,12 +27,12 @@ const RootLayout = ({ children, pageTitle }: RootLayoutProps) => {
       <ThemeProvider
         attribute='class'
         //todo: change default theme to system with better light theme
-        defaultTheme='dark'
-        enableSystem={false}
+        defaultTheme='system'
+        enableSystem
         disableTransitionOnChange
       >
         <Header />
-        <div className=' px-4 flex column justify-center items-center'>
+        <div className='px-4 flex column justify-center items-center'>
           {children}
         </div>
         <Footer />

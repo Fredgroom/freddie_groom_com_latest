@@ -4,11 +4,11 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className='flex pt-11 p-4 sm:p-8 justify-between items-center'>
+    <footer className='flex pt-11 p-4 sm:p-8 justify-end sm:justify-between items-center'>
       <div>
         <Large>&copy; {new Date().getFullYear()} freddiegroom.com</Large>
       </div>
-      <div className='flex items-center gap-6'>
+      <div className='hidden sm:flex items-center gap-6'>
         <Link href='https://github.com/fredgroom'>
           <GitHubLogoIcon className='w-12 h-12' />
         </Link>
