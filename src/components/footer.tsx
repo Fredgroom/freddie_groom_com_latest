@@ -1,4 +1,3 @@
-import Download from './download';
 import { Large } from './typography';
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
@@ -16,8 +15,6 @@ const Footer = () => {
         <Link href='https://www.linkedin.com/in/freddie-groom/'>
           <LinkedInLogoIcon className='w-12 h-12' />
         </Link>
-
-        {/* <Download /> */}
       </div>
     </footer>
   );
