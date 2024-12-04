@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className='flex pt-11 p-8 justify-between items-center'>
+    <footer className='flex pt-11 p-4 sm:p-8 justify-between items-center'>
       <div>
         <Large>&copy; {new Date().getFullYear()} freddiegroom.com</Large>
       </div>
@@ -16,7 +16,8 @@ const Footer = () => {
         <Link href='https://www.linkedin.com/in/freddie-groom/'>
           <LinkedInLogoIcon className='w-12 h-12' />
         </Link>
-        <Download />
+
+        {/* <Download /> */}
       </div>
     </footer>
   );
